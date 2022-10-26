@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Caveat', cursive;
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    -webkit-transition: 0 .2s linear;
+    transition: all .2s linear;
+
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+
+}
+
+body {
+    background-color: #E9967A;
+    padding: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    align-items: flex-start;
+    margin: 8rem auto;
+}
+
+.container .main-video-container {
+    flex: 1 1 700px;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 0 .7rem .5rem rgba(0, 0, 0, .1);
+}
+
+.container .main-video-container .main-title {
+    font-size: 3rem;
+    color: #333;
+    margin-top: 1rem;
+    font-weight: bolder;
+
+}
+
+.container .main-video-container video {
+    border-radius: .5rem;
+    /* border-bottom: .7rem; */
+    width: 100%;
+}
+
+.container .video-list-container {
+    flex: 1 1 350px;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    height: 500px;
+    overflow-y: scroll;
+    box-shadow: 0 0 .1rem rgba(0, 0, 0, .1);
+}
+
+.container .video-list-container .video-list {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    background-color: #eee;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem .1rem rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.container .video-list-container .video-list.active {
+    background-color: #000000a4;
+  
+}
+.container .video-list-container .video-list.active .title-text {
+    color: #fff;
+  
+}
+
+.container .video-list-container::-webkit-scrollbar {
+    width: 1rem;
+}
+
+.container .video-list-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.container .video-list-container::-webkit-scrollbar-thumb {
+
+    border-radius: .5rem;
+    background-color: #231612;
+}
+
+.container .video-list-container .video-list:hover {
+    background-color: #0000004d;
+}
+
+
+
+.container .video-list-container .video-list h3 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.container .video-list-container .video-list video {
+    width: 10rem;
+    object-fit: contain;
+    border-radius: .5rem;
+}
+
+@media (max-width:1200ox) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media (max-width:450px) {
+    .container .main-video-container .title-text {
+        text-align: center;
+        font-size: 1.7rem;
+    }
+
+    .container .video-list-container .video-list {
+        flex-flow: column;
+        gap: 1.2rem;
+    }
+
+    .container .video-list-container .video-list h3 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .container .video-list-container .video-list video {
+        width: 100%;
+    }
+}
